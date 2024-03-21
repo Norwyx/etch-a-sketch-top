@@ -9,9 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rammetto+One&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
 </head>
 <body>
-    
+    <h1 class="heading">Etch-a-Sketch</h1>
+    <main>
+        <section class="settings">
+            <input type="color" value="#333333" id="colorPicker">
+            <button id="colorBtn" class="active">Color Mode</button>
+            <button id="rainbowBtn">Rainbow Mode</button>
+            <button id="clearBtn">Clear</button>
+            <div id="sizeValues">
+                <span id="valueX">16</span> x <span id="valueY">16</span>
+            </div>
+            <input id="sizeSlider" type="range" value="16" min="1" max="64">
+        </section>
+        <section id="grid">
+            
+        </section>
+    </main>
 </body>
 </html>
