@@ -56,3 +56,23 @@ REUSABLES
 .text-center {
     text-align: center;
 }
+
+
+
+/* 
+VARIABLES
+*/
+:root {
+    --bg-clr: rgb(242, 242, 242);
+    --main-clr: rgb(51, 51, 51);
+    --shadow-grid: 0px 0px 10px 1px rgba(0,0,0,0.100);
+
+    --font-heading: 'Rammetto One', sans-serif;
+    --font-content: 'Inter', sans-serif;
+}
+
+
+
+/* 
+MAIN STYLES 
+*/
