@@ -11,21 +11,21 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
 </head>
-<body>
+<body class="flex column center">
     <h1 class="heading">Etch-a-Sketch</h1>
-    <main>
-        <section class="settings">
+    <main class="flex">
+        <section class="settings flex column center">
             <input type="color" value="#333333" id="colorPicker">
-            <button id="colorBtn" class="active">Color Mode</button>
-            <button id="rainbowBtn">Rainbow Mode</button>
-            <button id="clearBtn">Clear</button>
+            <button class="btn active" id="colorBtn" class="active">Color Mode</button>
+            <button class="btn" id="rainbowBtn">Rainbow Mode</button>
+            <button class="btn" id="clearBtn">Clear</button>
             <div id="sizeValues">
                 <span id="valueX">16</span> x <span id="valueY">16</span>
             </div>
             <input id="sizeSlider" type="range" value="16" min="1" max="64">
         </section>
         <section id="grid">
-            
+
         </section>
     </main>
 </body>
