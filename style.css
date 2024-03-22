@@ -173,7 +173,7 @@ MEDIA QUERIES
 */
 @media (min-width: 43.75rem) {
     body {
-        gap: 4rem;
+        gap: 2rem;
     }
 
     .heading {
@@ -188,5 +188,16 @@ MEDIA QUERIES
     #grid {
         width: 400px;
         height: 400px;
+    }
+}
+
+@media (min-width: 64rem) {
+    main {
+        gap: 5rem;
+    }
+
+    #grid {
+        width: 500px;
+        height: 500px;
     }
 }
