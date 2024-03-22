@@ -17,6 +17,7 @@ const grid = document.querySelector('#grid');
 colorPicker.oninput = (e) => setCurrentColor(e.target.value)
 colorBtn.onclick = () => setCurrentMode('color')
 rainbowBtn.onclick = () => setCurrentMode('rainbow')
+sizeSlider.onmousemove = (e) => setCurrentSize(e.target.value)
 
 function setCurrentColor (newColor) {
     currentColor = newColor
@@ -25,6 +26,10 @@ function setCurrentColor (newColor) {
 function setCurrentMode (newMode) {
     toggleActive(newMode)
     currentMode = newMode
+}
+
+function setCurrentSize (newSize) {
+    currentSize = newSize
 }
 
 function toggleActive (newMode) {
