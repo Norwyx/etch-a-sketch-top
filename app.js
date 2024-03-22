@@ -14,6 +14,13 @@ const sizeValues = document.getElementById('sizeValues')
 const sizeSlider = document.getElementById('sizeSlider')
 const grid = document.querySelector('#grid');
 
+colorPicker.oninput = (e) => setCurrentColor(e.target.value)
+
+function setCurrentColor (newColor) {
+    currentColor = newColor
+}
+
+
 function createGrid(numberPerRow) {
     const total = (numberPerRow * numberPerRow) + numberPerRow;
     const mod = numberPerRow + 1;
