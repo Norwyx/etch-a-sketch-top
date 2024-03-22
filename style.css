@@ -167,3 +167,26 @@ input[type='range']::-webkit-slider-thumb {
     height: 325px;
     box-shadow: var(--shadow-grid);
 }
+
+/* 
+MEDIA QUERIES
+*/
+@media (min-width: 43.75rem) {
+    body {
+        gap: 4rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    main {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    #grid {
+        width: 400px;
+        height: 400px;
+    }
+}
