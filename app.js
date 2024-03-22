@@ -15,11 +15,30 @@ const sizeSlider = document.getElementById('sizeSlider')
 const grid = document.querySelector('#grid');
 
 colorPicker.oninput = (e) => setCurrentColor(e.target.value)
+colorBtn.onclick = () => setCurrentMode('color')
+rainbowBtn.onclick = () => setCurrentMode('rainbow')
 
 function setCurrentColor (newColor) {
     currentColor = newColor
 }
 
+function setCurrentMode (newMode) {
+    toggleActive(newMode)
+    currentMode = newMode
+}
+
+function toggleActive (newMode) {
+    switch (newMode) {
+        case 'color':
+            colorBtn.classList.add('active')
+            rainbowBtn.classList.remove('active')
+            break;
+        case 'rainbow':
+            colorBtn.classList.remove('active')
+            rainbowBtn.classList.add('active')
+            break;
+    }
+}
 
 function createGrid(numberPerRow) {
     const total = (numberPerRow * numberPerRow) + numberPerRow;
