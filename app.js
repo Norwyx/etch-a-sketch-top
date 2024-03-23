@@ -63,7 +63,7 @@ function reloadGrid () {
 }
 
 function clearGrid () {
-    grid.innerHTML = ''
+    grid.innerHTML = ' '
 }
 
 function createGrid (numberPerRow) {
@@ -85,4 +85,9 @@ function createGrid (numberPerRow) {
         
         grid.appendChild(div);
     }
+}
+
+window.onload = () => {
+    createGrid(DEFAULT_SIZE)
+    toggleActive(DEFAULT_MODE)
 }
