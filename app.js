@@ -17,7 +17,7 @@ const grid = document.querySelector('#grid');
 colorPicker.oninput = (e) => setCurrentColor(e.target.value)
 colorBtn.onclick = () => setCurrentMode('color')
 rainbowBtn.onclick = () => setCurrentMode('rainbow')
-sizeSlider.onmousemove = (e) => setCurrentSize(e.target.value)
+sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value)
 
 function setCurrentColor (newColor) {
     currentColor = newColor
@@ -45,7 +45,11 @@ function toggleActive (newMode) {
     }
 }
 
-function createGrid(numberPerRow) {
+function updateSizeValue (value) {
+    sizeValues.innerHTML = `${value} x ${value}`
+}
+
+function createGrid (numberPerRow) {
     const total = (numberPerRow * numberPerRow) + numberPerRow;
     const mod = numberPerRow + 1;
     const divWidth = grid.offsetWidth / numberPerRow;
