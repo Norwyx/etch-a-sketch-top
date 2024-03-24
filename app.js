@@ -74,16 +74,29 @@ function createGrid (numberPerRow) {
     for (let i = 1; i < total; i++) {
         const div = document.createElement('div');
         div.classList.add('grid-element')
+        div.addEventListener('mouseover', changeColor)
 
         if (i % mod === 0) {
             div.style.cssText = "border: 0; height: 0; width: 100%";
-        } else {
-            div.style.cssText = "border: 1px solid black;";
+        } 
+        else {
             div.style.width = `${divWidth}px`
             div.style.height = `${divWidth}px`
         }
         
         grid.appendChild(div);
+    }
+}
+
+function changeColor (e) {
+    if (currentMode === 'rainbow') {
+        let rainbowR = Math.floor(Math.random() * 256)
+        let rainbowB = Math.floor(Math.random() * 256)
+        let rainbowG = Math.floor(Math.random() * 256)
+        e.target.style.backgroundColor = `rgb(${rainbowR}, ${rainbowB}, ${rainbowG})`
+    } 
+    else if (currentMode === 'color') {
+        e.target.style.backgroundColor = currentColor
     }
 }
 
