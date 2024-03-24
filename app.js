@@ -19,7 +19,7 @@ colorBtn.onclick = () => setCurrentMode('color')
 rainbowBtn.onclick = () => setCurrentMode('rainbow')
 clearBtn.onclick = () => reloadGrid()
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value)
-sizeSlider.onchange = (e) => changeSize(e.target.value)
+sizeSlider.onchange = (e) => changeSize(parseInt(e.target.value))
 
 function setCurrentColor (newColor) {
     currentColor = newColor
